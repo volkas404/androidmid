@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="21dp"
+        android:text=""
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <Button
+        android:id="@+id/bc"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="277dp"
+        android:layout_marginTop="108dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="108dp"
+        android:text="3" />
+
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="108dp"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="108dp"
+        android:text="2" />
+
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="277dp"
+        android:layout_marginTop="164dp"
+        android:text="-" />
+
+
+    <Button
+        android:id="@+id/bch"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="278dp"
+        android:layout_marginTop="281dp"
+        android:text="/" />
+
+    <Button
+        android:id="@+id/bn"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="277dp"
+        android:layout_marginTop="222dp"
+        android:text="*" />
+
+    <Button
+        android:id="@+id/b6"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="164dp"
+        android:text="6" />
+
+    <Button
+        android:id="@+id/brset"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="281dp"
+        android:text="AC" />
+
+    <Button
+        android:id="@+id/b9"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="222dp"
+        android:text="9" />
+
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="165dp"
+        android:text="4" />
+
+    <Button
+        android:id="@+id/b7"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="222dp"
+        android:text="7" />
+
+    <Button
+        android:id="@+id/b0"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="280dp"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/brsult"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="281dp"
+        android:text="=" />
+
+    <Button
+        android:id="@+id/b8"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="222dp"
+        android:text="8" />
+
+    <Button
+        android:id="@+id/b5"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="164dp"
+        android:text="5" />
+
+
+</RelativeLayout>

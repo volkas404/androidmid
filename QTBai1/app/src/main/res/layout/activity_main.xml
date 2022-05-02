@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="#000000"
+        android:paddingBottom="5dip">
+
+        <TextView
+            android:id="@+id/redbox1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1.1"
+            android:background="#D50D0D"
+            android:layout_marginRight="5dp"/>
+
+
+        <TextView
+            android:id="@+id/orangebox1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="#FF7D00"
+            android:layout_marginRight="5dp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1.3"
+        android:orientation="horizontal"
+        android:background="#000000"
+        android:paddingBottom="5dip"
+        >
+
+
+        <TextView
+            android:id="@+id/yellowbox1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1.2"
+            android:background="#FFEB3B"
+            android:layout_marginRight="5dp"
+            />
+
+        <TextView
+            android:id="@+id/greenbox1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1.2"
+            android:background="#00FF00"
+            android:layout_marginRight="5dp"
+            />
+
+        <TextView
+            android:id="@+id/bluebox1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1.2"
+            android:background="#1733CF" />
+
+
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:paddingBottom="30dp"
+        />
+
+</LinearLayout>
