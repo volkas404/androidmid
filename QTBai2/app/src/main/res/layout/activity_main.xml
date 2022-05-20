@@ -8,6 +8,16 @@
     android:layout_margin="20dp"
     tools:context=".MainActivity">
 
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/edsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        android:inputType="text"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@null" />
+
     <ListView
         android:id="@+id/lvcountry"
         android:layout_width="match_parent"

@@ -52,4 +52,5 @@ public class countryadapter extends ArrayAdapter<country> {
         return r;
     }
 
+
 }

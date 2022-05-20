@@ -19,6 +19,8 @@ import android.view.MenuItem;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 
@@ -48,34 +50,38 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                ArrayList<Integer> num = new ArrayList<Integer>();
+                for(int i=0;i<15;i++){
+                    num.add(i);
+                }
 
+                Collections.shuffle(num);
                 //Initial color state values
-
-                int[] redArray = {255, 0, 0};
-                int[] blueArray = {0, 0, 255};
-                int[] yellowArray = {255, 255, 0};
-                int[] orangeArray = {255, 125, 0};
-                int[] greenArray = {0, 255, 0};
+                Collections.shuffle(num);
+                int[] redArray = {num.get(0), num.get(1), num.get(2)};
+                int[] blueArray = {num.get(3), num.get(4), num.get(5)};
+                int[] yellowArray = {num.get(6), num.get(7), num.get(8)};
+                int[] orangeArray = {num.get(9), num.get(10), num.get(11)};
+                int[] greenArray = {num.get(12), num.get(13), num.get(14)};
 
                 progChange = progress;
 
-                Random rd = new Random(10+1);
-                int n = rd.nextInt(255+1-1)+1;
-                redArray[0] = redArray[0] - 2*progChange;
-                redArray[1] = redArray[1] + 2*progChange;
-                redArray[2] = redArray[2] + 2*progChange;
-                blueArray[0] = blueArray[0] + 2*progChange;
-                blueArray[1] = blueArray[1] + 2*progChange;
-                blueArray[2] = blueArray[2] - 2*progChange;
-                yellowArray[0] = yellowArray[0] - 2*progChange;
-                yellowArray[1] = yellowArray[1] - 2*progChange;
-                yellowArray[2] = yellowArray[2] + 2*progChange;
-                orangeArray[0] = orangeArray[0] - 2*progChange;
-                orangeArray[1] = orangeArray[1] - 1*progChange;
-                orangeArray[2] = orangeArray[2] + 2*progChange;
-                greenArray[0] = greenArray[0] + 2*progChange;
-                greenArray[1] = greenArray[1] - 2*progChange;
-                greenArray[2] = greenArray[2] + 2*progChange;
+
+                redArray[0] = redArray[0] + num.get(0)*progChange;
+                redArray[1] = redArray[1] + num.get(1)*progChange;
+                redArray[2] = redArray[2] + num.get(2)*progChange;
+                blueArray[0] = blueArray[0] + num.get(3)*progChange;
+                blueArray[1] = blueArray[1] + num.get(4)*progChange;
+                blueArray[2] = blueArray[2] + num.get(5)*progChange;
+                yellowArray[0] = yellowArray[0] + num.get(6)*progChange;
+                yellowArray[1] = yellowArray[1] + num.get(7)*progChange;
+                yellowArray[2] = yellowArray[2] + num.get(8)*progChange;
+                orangeArray[0] = orangeArray[0] + num.get(9)*progChange;
+                orangeArray[1] = orangeArray[1] + num.get(10)*progChange;
+                orangeArray[2] = orangeArray[2] + num.get(11)*progChange;
+                greenArray[0] = greenArray[0] + num.get(12)*progChange;
+                greenArray[1] = greenArray[1] + num.get(13)*progChange;
+                greenArray[2] = greenArray[2] + num.get(14)*progChange;
 
                 redbox1.setBackgroundColor(Color.rgb(redArray[0],redArray[1],redArray[2]));
                 bluebox1.setBackgroundColor(Color.rgb(blueArray[0],blueArray[1],blueArray[2]));

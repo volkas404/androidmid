@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -28,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
     EditText txt;
     String a1,a2;
     Button btn;
+    ImageButton swp;
     String []arrcurrentcy;
+    Integer tmp1,tmp2;
     ArrayAdapter<String>adaptercurrentcy;
     DecimalFormat fm = new DecimalFormat("###,###.### ");
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void addEvents() {
         btn = (Button) findViewById(R.id.ex);
+        swp = (ImageButton) findViewById(R.id.swap);
+        swp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sp1.setSelection(tmp2);
+                sp2.setSelection(tmp1);
+            }
+        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,10 +78,12 @@ public class MainActivity extends AppCompatActivity {
         sp2 = (Spinner) findViewById(R.id.spinner2);
         sp1.setAdapter(adaptercurrentcy);
         sp2.setAdapter(adaptercurrentcy);
+
         sp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 a1 = (String) sp1.getItemAtPosition(i);
+                tmp1 = i;
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -81,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 a2 = (String) sp2.getItemAtPosition(i);
+                tmp2 = i;
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -110,16 +124,16 @@ public class MainActivity extends AppCompatActivity {
                 description = parser.getValue(element,"description");
                 title = parser.getValue(element,"title");
                 pubDate = parser.getValue(element,"pubDate");
-                if(title.contains("("+a2+")") ==  true) {
+                if(title.contains("("+a2+")")) {
                     txttieude.setText(title);
                     int vitri = description.indexOf("=");
                     Double giatri = Double.parseDouble(description.substring(vitri+2, vitri+8).trim());
                     Double ketqua = Double.parseDouble(String.valueOf(txt.getText())) * giatri;
                     txtkq.setText("Kết quả: "+String.valueOf(fm.format(ketqua)));
-                    txtdate.setText("Thời gian cập nhật: "+pubDate);
-                    txtrate.setText("Tỷ giá: "+description);
+                    txtdate.setText("Thời gian cập nhật: " + pubDate);
+                    txtrate.setText("Tỷ giá: " + description);
                 }
-            }
+                }
             super.onPostExecute(s);
         }
     }

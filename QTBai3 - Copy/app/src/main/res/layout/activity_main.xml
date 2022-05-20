@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingTop="20dp"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Spinner
+        android:id="@+id/spinner1"
+        android:textSize="15sp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:gravity="center"/>
+    <ImageButton
+        android:id="@+id/swap"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/swap1">
+    </ImageButton>
+    <Spinner
+        android:id="@+id/spinner2"
+        android:textSize="15sp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:gravity="center"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tieude"
+            android:textSize="15sp"
+            android:text=""
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"></TextView>
+        <TextView
+            android:text="Nhập số tiền cần quy đổi"
+            android:textSize="15sp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"></TextView>
+        <EditText
+            android:id="@+id/texttien"
+            android:textSize="15sp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/ex"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quy đổi"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            ></Button>
+
+        <TextView
+            android:id="@+id/rate"
+            android:textSize="15sp"
+            android:text="Tỷ giá"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"></TextView>
+        <TextView
+            android:id="@+id/date"
+            android:textSize="15sp"
+            android:text="Thời gian"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"></TextView>
+        <TextView
+            android:id="@+id/kq"
+            android:textSize="15sp"
+            android:text="Kết quả"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"></TextView>
+    </LinearLayout>
+
+</LinearLayout>

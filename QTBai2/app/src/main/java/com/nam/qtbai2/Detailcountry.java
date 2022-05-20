@@ -19,11 +19,11 @@ import java.net.URL;
 import java.text.DecimalFormat;
 import com.nam.model.country;
 public class Detailcountry extends AppCompatActivity{
-    TextView ds, dt, td;
+    TextView ds, dt, td, qg;
     ImageView ctmap;
     private country ct;
     Bitmap bitmap;
-    DecimalFormat sdf = new DecimalFormat("###,###.### ");
+    DecimalFormat fm = new DecimalFormat("###,###.### ");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class Detailcountry extends AppCompatActivity{
     }
 
     private void addControl() {
+        qg = (TextView)  findViewById(R.id.txttennuoc);
         ds = (TextView)  findViewById(R.id.txtdan);
         dt = (TextView)  findViewById(R.id.txtdientich);
         td = (TextView)  findViewById(R.id.txtthudo);
@@ -77,8 +78,9 @@ public class Detailcountry extends AppCompatActivity{
 
         @Override
         protected void onPostExecute(Bitmap bitmap) {
-            ds.setText("Dân số: "+sdf.format(Float.parseFloat(ct.getDanso()))+" Người");
-            dt.setText("Diện tích: "+sdf.format(Float.parseFloat(ct.getDientich()))+" km² ");
+            qg.setText("Quốc gia: "+ct.getTenquocgia());
+            ds.setText("Dân số: "+fm.format(Float.parseFloat(ct.getDanso()))+" Người");
+            dt.setText("Diện tích: "+fm.format(Float.parseFloat(ct.getDientich()))+" km² ");
             td.setText("Thủ đô: "+ct.getThudo());
             ctmap.setImageBitmap(bitmap);
             if (dialog.isShowing()) {
